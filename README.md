@@ -1,7 +1,7 @@
 # AtlasSearchWorkshopDC
 
 
-$search
+## $search
 ```
 {
   index: 'movie_index',
@@ -16,7 +16,7 @@ $search
   'highlight': { "path": 'title' }
 }
 ```
-$project
+## $project
 ```
 {
    'document': "$$ROOT",
@@ -26,15 +26,15 @@ $project
      }
 }
 ```
-$match
+## $match
 ```
 {"document.poster": {'$ne': null}}
 ```
-$limit
+## $limit
 ```
 15
 ```
-$sort
+## $sort
 ```
 {"score": -1}
 ```
